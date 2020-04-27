@@ -16,6 +16,10 @@ namespace retro_bank.Models
         public string Conta { get; set; }
         public string Senha { get; set; }
 
+        //public ICollection<Transferencia> Transferencias { get; set; }
+
+      //  public ICollection<Extrato> Extratos { get; set; }
+
         public bool Salvar()
         {
             try

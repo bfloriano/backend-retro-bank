@@ -255,6 +255,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\TransferenciaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -267,9 +268,18 @@
     <Compile Include="Migrations\20200427181718_SeedClientes.designer.cs">
       <DependentUpon>20200427181718_SeedClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200427204035_TransferenciaMigration.cs" />
+    <Compile Include="Migrations\20200427204035_TransferenciaMigration.designer.cs">
+      <DependentUpon>20200427204035_TransferenciaMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200427204055_SeedMigration.cs" />
+    <Compile Include="Migrations\20200427204055_SeedMigration.designer.cs">
+      <DependentUpon>20200427204055_SeedMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\Transferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -326,6 +336,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Transferencia\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
