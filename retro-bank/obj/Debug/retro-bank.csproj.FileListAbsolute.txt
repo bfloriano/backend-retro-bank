@@ -148,3 +148,6 @@ C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\bin\zh-Hant\Microsoft.Da
 C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\obj\Debug\retro-bank.csproj.CopyComplete
 C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\obj\Debug\retro-bank.dll
 C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\obj\Debug\retro-bank.pdb
+C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\bin\System.Web.Cors.dll
+C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\bin\System.Web.Http.Cors.dll
+C:\Users\Avanade\Desktop\Projetos\retro-bank\retro-bank\bin\System.Web.Http.Cors.xml

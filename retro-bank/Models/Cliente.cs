@@ -30,6 +30,12 @@ namespace retro_bank.Models
             }
         }
 
+        internal void Apagar()
+        {
+            _db.Clientes.Remove(this);
+            _db.SaveChanges();
+        }
+
         public static List<Cliente> Lista() { return _db.Clientes.ToList(); }
 
         public static DbSet<Cliente> Busca()

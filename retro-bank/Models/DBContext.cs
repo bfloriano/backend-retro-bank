@@ -20,8 +20,8 @@ namespace retro_bank.Models
             }
             catch
             {
-                config = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Retro_Bank_Clientes;Data Source=WIN-VWQVJHQQJK\SQLEXPRESS";
-                //config = @"Server=tcp:retro-bank.database.windows.net,1433;Initial Catalog=retro-bank;Persist Security Info=True;User ID=bfloriano;Password={your_password}; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+                //config = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Retro_Bank_Clientes;Data Source=WIN-VWQVJHQQJK\SQLEXPRESS";
+                config = @"Server=tcp:retro-bank.database.windows.net,1433;Initial Catalog=retro-bank;Persist Security Info=True;User ID=bfloriano;Password=Avanade@2020; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             }
             optionsBuilder.UseSqlServer(config);
         }
