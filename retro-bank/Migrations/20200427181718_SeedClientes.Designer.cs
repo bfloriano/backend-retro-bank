@@ -9,7 +9,7 @@ using retro_bank.Models;
 namespace retro_bank.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20200427132711_SeedClientes")]
+    [Migration("20200427181718_SeedClientes")]
     partial class SeedClientes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
