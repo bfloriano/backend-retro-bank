@@ -10,7 +10,7 @@ using retro_bank.Models;
 namespace retro_bank.Controllers
 {
 
-    [Route("extrato")]
+    //[Route("extrato")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ExtratoController : ApiController
     {

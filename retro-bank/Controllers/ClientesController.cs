@@ -39,10 +39,8 @@ namespace retro_bank.Controllers
                    select new
                    {
                        Nome = c.Nome,
-                       CPF = c.CPF,
                        Agencia = c.Agencia,
                        Conta = c.Conta,
-                       Senha = c.Senha,
                        Id = c.Id,
                    }
                ).First();
