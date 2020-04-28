@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using Microsoft.EntityFrameworkCore;
 
 namespace retro_bank.Models
 {
     public class Transferencia
     {
-        private static DBContext _db = new DBContext();
+        private static DBContext2 _db = new DBContext2();
         public int Id { get; set; }
         public double Valor { get; set; }
         public string Data { get; set; }
@@ -28,6 +29,16 @@ namespace retro_bank.Models
             {
                 return false;
             }
+        }
+
+        public static DbSet<Transferencia> Busca()
+        {
+            return _db.Transferencias;
+        }
+
+        internal static List<Transferencia> Lista()
+        {
+            return _db.Transferencias.ToList();
         }
 
         // public ICollection<Cliente> Clientes { get; set; }

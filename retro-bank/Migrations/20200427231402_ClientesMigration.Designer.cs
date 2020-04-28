@@ -8,9 +8,9 @@ using retro_bank.Models;
 
 namespace retro_bank.Migrations
 {
-    [DbContext(typeof(DBContext))]
-    [Migration("20200427204055_SeedMigration")]
-    partial class SeedMigration
+    [DbContext(typeof(DBContext1))]
+    [Migration("20200427231402_ClientesMigration")]
+    partial class ClientesMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,24 +45,6 @@ namespace retro_bank.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clientes");
-                });
-
-            modelBuilder.Entity("retro_bank.Models.Transferencia", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Data")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Valor")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Transferencias");
                 });
 #pragma warning restore 612, 618
         }

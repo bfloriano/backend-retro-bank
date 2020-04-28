@@ -260,25 +260,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200426205116_ClientesMigration.cs" />
-    <Compile Include="Migrations\20200426205116_ClientesMigration.designer.cs">
-      <DependentUpon>20200426205116_ClientesMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20200427231402_ClientesMigration.cs" />
+    <Compile Include="Migrations\20200427231402_ClientesMigration.designer.cs">
+      <DependentUpon>20200427231402_ClientesMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200427181718_SeedClientes.cs" />
-    <Compile Include="Migrations\20200427181718_SeedClientes.designer.cs">
-      <DependentUpon>20200427181718_SeedClientes.cs</DependentUpon>
+    <Compile Include="Migrations\20200427231436_SeedClientes.cs" />
+    <Compile Include="Migrations\20200427231436_SeedClientes.designer.cs">
+      <DependentUpon>20200427231436_SeedClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200427204035_TransferenciaMigration.cs" />
-    <Compile Include="Migrations\20200427204035_TransferenciaMigration.designer.cs">
-      <DependentUpon>20200427204035_TransferenciaMigration.cs</DependentUpon>
+    <Compile Include="Migrations\DBContext1ModelSnapshot.cs" />
+    <Compile Include="Migrations\DBContext2Migrations\20200427231532_TransferenciasMigration.cs" />
+    <Compile Include="Migrations\DBContext2Migrations\20200427231532_TransferenciasMigration.designer.cs">
+      <DependentUpon>20200427231532_TransferenciasMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200427204055_SeedMigration.cs" />
-    <Compile Include="Migrations\20200427204055_SeedMigration.designer.cs">
-      <DependentUpon>20200427204055_SeedMigration.cs</DependentUpon>
+    <Compile Include="Migrations\DBContext2Migrations\20200427231548_SeedTransferencias.cs" />
+    <Compile Include="Migrations\DBContext2Migrations\20200427231548_SeedTransferencias.designer.cs">
+      <DependentUpon>20200427231548_SeedTransferencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\DBContextModelSnapshot.cs" />
+    <Compile Include="Migrations\DBContext2Migrations\DBContext2ModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\DBContext1.cs" />
+    <Compile Include="Models\DBContext2.cs" />
     <Compile Include="Models\Transferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -313,6 +315,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\retro-bank-api - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\retro-bank-tr - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

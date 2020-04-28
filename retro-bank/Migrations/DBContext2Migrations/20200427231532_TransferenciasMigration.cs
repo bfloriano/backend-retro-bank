@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace retro_bank.Migrations
+namespace retro_bank.Migrations.DBContext2Migrations
 {
-    public partial class TransferenciaMigration : Migration
+    public partial class TransferenciasMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using retro_bank.Models;
 
-namespace retro_bank.Migrations
+namespace retro_bank.Migrations.DBContext2Migrations
 {
-    public partial class SeedMigration : Migration
+    public partial class SeedTransferencias : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

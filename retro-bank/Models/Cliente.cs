@@ -8,13 +8,17 @@ namespace retro_bank.Models
 {
     public class Cliente
     {
-        private static DBContext _db = new DBContext();
+        private static DBContext1 _db = new DBContext1();
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Agencia { get; set; }
         public string Conta { get; set; }
         public string Senha { get; set; }
+
+       // public int TransferenciaId { get; set; }
+        //public Transferencia Transferencia { get; set; }
+
 
         //public ICollection<Transferencia> Transferencias { get; set; }
 
@@ -40,7 +44,10 @@ namespace retro_bank.Models
             _db.SaveChanges();
         }
 
-        public static List<Cliente> Lista() { return _db.Clientes.ToList(); }
+        public static List<Cliente> Lista() 
+        { 
+            return _db.Clientes.ToList(); 
+        }
 
         public static DbSet<Cliente> Busca()
         {

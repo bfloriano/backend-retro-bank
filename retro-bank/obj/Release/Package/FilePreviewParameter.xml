@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="retro-bank-tr" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Avanade\\Desktop\\Projetos\\retro-bank\\retro-bank\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Avanade\\Desktop\\Projetos\\retro-bank\\retro-bank\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="conexao-Web.config Connection String" description="conexao Connection String used in web.config by the application to access the database." value="Server=tcp:retro-bank.database.windows.net,1433;Initial Catalog=retro-bank;Persist Security Info=False;User ID=bfloriano;Password=Avanade@2020;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Avanade\\Desktop\\Projetos\\retro-bank\\retro-bank\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conexao']/@connectionString" />
+  </parameter>
+</parameters>
