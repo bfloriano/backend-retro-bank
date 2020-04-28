@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using retro_bank.Models;
+using System.Linq;
 
 namespace retro_bank.Migrations
 {
-    public partial class SeedExtrato : Migration
+    public partial class SeedExtratos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,6 +24,13 @@ namespace retro_bank.Migrations
                 Tipo = TipoOperacao.Debito,
             }.Salvar();
 
+            new Extrato()
+            {
+                ClienteId = Cliente.Busca().Find(3).Id,
+                Valor = 1000.00,
+                Descricao = "Mc",
+                Tipo = TipoOperacao.Debito,
+            }.Salvar();
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

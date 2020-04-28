@@ -15,6 +15,7 @@ namespace retro_bank.Models
         public string Agencia { get; set; }
         public string Conta { get; set; }
         public string Senha { get; set; }
+        public double SaldoI { get; set; }
 
         internal static Cliente BuscaPorId(int clienteId)
         {
@@ -26,9 +27,9 @@ namespace retro_bank.Models
             return Extrato.Lista(this.Id);
         }
 
-        internal double Saldo()
+        internal static double Saldo(int Id, double SaldoI)
         {
-            return Extrato.SaldoPorClienteId(this.Id);
+            return SaldoI + Transferencia.SaldoAtualizado(Id, SaldoI);
         }
 
         // public int TransferenciaId { get; set; }

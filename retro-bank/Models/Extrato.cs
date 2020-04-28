@@ -41,7 +41,6 @@ namespace retro_bank.Models
             double debito = Extrato.Lista(ClienteId).Where(c => c.Tipo == TipoOperacao.Debito).Sum(c => c.Valor);
             
             return credito - debito;
-            
         }
 
     }

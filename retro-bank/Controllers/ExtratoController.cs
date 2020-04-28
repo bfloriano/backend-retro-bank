@@ -21,7 +21,7 @@ namespace retro_bank.Controllers
             var cliente = Cliente.BuscaPorId(clienteId);
             return new
             {
-                Saldo = cliente.Saldo(),
+                //Saldo = cliente.Saldo(clienteId),
                 Extrato = cliente.ListaExtrato()
             };
 

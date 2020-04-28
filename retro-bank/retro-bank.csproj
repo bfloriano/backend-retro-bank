@@ -261,25 +261,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200427231402_ClientesMigration.cs" />
-    <Compile Include="Migrations\20200427231402_ClientesMigration.designer.cs">
-      <DependentUpon>20200427231402_ClientesMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20200428184215_ClientesMigration.cs" />
+    <Compile Include="Migrations\20200428184215_ClientesMigration.designer.cs">
+      <DependentUpon>20200428184215_ClientesMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200427231436_SeedClientes.cs" />
-    <Compile Include="Migrations\20200427231436_SeedClientes.designer.cs">
-      <DependentUpon>20200427231436_SeedClientes.cs</DependentUpon>
+    <Compile Include="Migrations\20200428184237_SeedClientes.cs" />
+    <Compile Include="Migrations\20200428184237_SeedClientes.designer.cs">
+      <DependentUpon>20200428184237_SeedClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200428114541_TransferenciaMigration.cs" />
-    <Compile Include="Migrations\20200428114541_TransferenciaMigration.designer.cs">
-      <DependentUpon>20200428114541_TransferenciaMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20200428185533_SeedTransferencias.cs" />
+    <Compile Include="Migrations\20200428185533_SeedTransferencias.designer.cs">
+      <DependentUpon>20200428185533_SeedTransferencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200428115555_ExtratoMigration.cs" />
-    <Compile Include="Migrations\20200428115555_ExtratoMigration.designer.cs">
-      <DependentUpon>20200428115555_ExtratoMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20200428120013_SeedExtrato.cs" />
-    <Compile Include="Migrations\20200428120013_SeedExtrato.designer.cs">
-      <DependentUpon>20200428120013_SeedExtrato.cs</DependentUpon>
+    <Compile Include="Migrations\20200428185609_SeedExtratos.cs" />
+    <Compile Include="Migrations\20200428185609_SeedExtratos.designer.cs">
+      <DependentUpon>20200428185609_SeedExtratos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DBContext1ModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using Microsoft.Ajax.Utilities;
 using Microsoft.EntityFrameworkCore;
 
 namespace retro_bank.Models
@@ -15,9 +16,6 @@ namespace retro_bank.Models
         public DateTime Data { get; internal set; }
         public int ClienteRemetenteId { get; set; }
         public int ClienteDestinatarioId { get; set; }
-
-
-
 
         internal bool Salvar()
         {
@@ -47,6 +45,20 @@ namespace retro_bank.Models
         {
             return _db.Transferencias.ToList();
         }
+
+        internal static double SaldoAtualizado(int ClienteRemetenteId, double Valor)
+        {
+            double valorI = Extrato.SaldoPorClienteId(ClienteRemetenteId) - Valor;
+
+            return valorI;
+        }
+        /*
+        internal double SaldoAtualizadoDestinatario(int ClienteDestinatarioId)
+        {
+            double valorI = Cliente.Saldo(this.ClienteDestinatarioId);
+
+            return valorI + Valor;
+        }*/
 
         // public ICollection<Cliente> Clientes { get; set; }
 
