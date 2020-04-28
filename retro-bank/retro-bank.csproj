@@ -269,13 +269,13 @@
       <DependentUpon>20200427231436_SeedClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DBContext1ModelSnapshot.cs" />
-    <Compile Include="Migrations\DBContext2Migrations\20200427231532_TransferenciasMigration.cs" />
-    <Compile Include="Migrations\DBContext2Migrations\20200427231532_TransferenciasMigration.designer.cs">
-      <DependentUpon>20200427231532_TransferenciasMigration.cs</DependentUpon>
+    <Compile Include="Migrations\DBContext2Migrations\20200428035759_TransferenciaMigration.cs" />
+    <Compile Include="Migrations\DBContext2Migrations\20200428035759_TransferenciaMigration.designer.cs">
+      <DependentUpon>20200428035759_TransferenciaMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\DBContext2Migrations\20200427231548_SeedTransferencias.cs" />
-    <Compile Include="Migrations\DBContext2Migrations\20200427231548_SeedTransferencias.designer.cs">
-      <DependentUpon>20200427231548_SeedTransferencias.cs</DependentUpon>
+    <Compile Include="Migrations\DBContext2Migrations\20200428035819_SeedTransferencia.cs" />
+    <Compile Include="Migrations\DBContext2Migrations\20200428035819_SeedTransferencia.designer.cs">
+      <DependentUpon>20200428035819_SeedTransferencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DBContext2Migrations\DBContext2ModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -315,7 +315,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\retro-bank-api - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\retro-bank-tr - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\retro-transferencia - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

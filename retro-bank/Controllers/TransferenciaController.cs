@@ -8,8 +8,8 @@ using retro_bank.Models;
 
 namespace retro_bank.Controllers
 {
-  
     [Route("")]
+    [Route("transferencia")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransferenciaController : ApiController
     {

@@ -9,8 +9,8 @@ using retro_bank.Models;
 namespace retro_bank.Migrations.DBContext2Migrations
 {
     [DbContext(typeof(DBContext2))]
-    [Migration("20200427231548_SeedTransferencias")]
-    partial class SeedTransferencias
+    [Migration("20200428035819_SeedTransferencia")]
+    partial class SeedTransferencia
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

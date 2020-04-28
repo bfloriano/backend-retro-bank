@@ -2,7 +2,7 @@
 
 namespace retro_bank.Migrations.DBContext2Migrations
 {
-    public partial class TransferenciasMigration : Migration
+    public partial class TransferenciaMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
