@@ -9,10 +9,12 @@ namespace retro_bank.Models
 {
     public class Transferencia
     {
-        private static DBContext2 _db = new DBContext2();
+        private static DBContext1 _db = new DBContext1();
         public int Id { get; set; }
         public double Valor { get; set; }
         public string Data { get; set; }
+        public int ClienteRemetenteId { get; set; }
+        public int ClienteDestinatarioId { get; set; }
 
 
 

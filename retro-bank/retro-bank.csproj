@@ -255,6 +255,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ExtratoController.cs" />
     <Compile Include="Controllers\TransferenciaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -268,19 +269,22 @@
     <Compile Include="Migrations\20200427231436_SeedClientes.designer.cs">
       <DependentUpon>20200427231436_SeedClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200428114541_TransferenciaMigration.cs" />
+    <Compile Include="Migrations\20200428114541_TransferenciaMigration.designer.cs">
+      <DependentUpon>20200428114541_TransferenciaMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200428115555_ExtratoMigration.cs" />
+    <Compile Include="Migrations\20200428115555_ExtratoMigration.designer.cs">
+      <DependentUpon>20200428115555_ExtratoMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200428120013_SeedExtrato.cs" />
+    <Compile Include="Migrations\20200428120013_SeedExtrato.designer.cs">
+      <DependentUpon>20200428120013_SeedExtrato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBContext1ModelSnapshot.cs" />
-    <Compile Include="Migrations\DBContext2Migrations\20200428035759_TransferenciaMigration.cs" />
-    <Compile Include="Migrations\DBContext2Migrations\20200428035759_TransferenciaMigration.designer.cs">
-      <DependentUpon>20200428035759_TransferenciaMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\DBContext2Migrations\20200428035819_SeedTransferencia.cs" />
-    <Compile Include="Migrations\DBContext2Migrations\20200428035819_SeedTransferencia.designer.cs">
-      <DependentUpon>20200428035819_SeedTransferencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\DBContext2Migrations\DBContext2ModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DBContext1.cs" />
-    <Compile Include="Models\DBContext2.cs" />
+    <Compile Include="Models\Extrato.cs" />
     <Compile Include="Models\Transferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

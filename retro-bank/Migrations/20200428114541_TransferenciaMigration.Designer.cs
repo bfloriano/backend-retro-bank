@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using retro_bank.Models;
 
-namespace retro_bank.Migrations.DBContext2Migrations
+namespace retro_bank.Migrations
 {
-    [DbContext(typeof(DBContext2))]
-    [Migration("20200428035759_TransferenciaMigration")]
+    [DbContext(typeof(DBContext1))]
+    [Migration("20200428114541_TransferenciaMigration")]
     partial class TransferenciaMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,12 +20,45 @@ namespace retro_bank.Migrations.DBContext2Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("retro_bank.Models.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Agencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CPF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Conta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Senha")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
+
             modelBuilder.Entity("retro_bank.Models.Transferencia", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ClienteDestinatarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ClienteRemetenteId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Data")
                         .HasColumnType("nvarchar(max)");

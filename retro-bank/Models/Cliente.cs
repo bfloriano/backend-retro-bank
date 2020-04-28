@@ -16,13 +16,28 @@ namespace retro_bank.Models
         public string Conta { get; set; }
         public string Senha { get; set; }
 
-       // public int TransferenciaId { get; set; }
+        internal static Cliente BuscaPorId(int clienteId)
+        {
+            return Cliente.Busca().Where(c => c.Id == clienteId).First();
+        }
+
+        internal List<Extrato> ListaExtrato()
+        {
+            return Extrato.Lista(this.Id);
+        }
+
+        internal double Saldo()
+        {
+            return Extrato.SaldoPorClienteId(this.Id);
+        }
+
+        // public int TransferenciaId { get; set; }
         //public Transferencia Transferencia { get; set; }
 
 
         //public ICollection<Transferencia> Transferencias { get; set; }
 
-      //  public ICollection<Extrato> Extratos { get; set; }
+        //  public ICollection<Extrato> Extratos { get; set; }
 
         public bool Salvar()
         {

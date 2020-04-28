@@ -32,8 +32,11 @@ namespace retro_bank.Models
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Transferencia> Transferencias { get; set; }
+        public DbSet<Extrato> Extratos { get; set; }
 
- 
+
+
 
 
     }
