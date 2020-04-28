@@ -34,15 +34,16 @@ namespace retro_bank.Models
             }
         }
 
+    
         internal static double SaldoPorClienteId(int ClienteId)
         {
-            double saldo = 0;
-            foreach(var e in Extrato.Lista(ClienteId))
-            {
-                saldo += e.Valor;
-            }
-            return saldo;
+            double credito = Extrato.Lista(ClienteId).Where(c => c.Tipo == TipoOperacao.Credito).Sum(c => c.Valor);
+            double debito = Extrato.Lista(ClienteId).Where(c => c.Tipo == TipoOperacao.Debito).Sum(c => c.Valor);
+            
+            return credito - debito;
+            
         }
+
     }
     public enum TipoOperacao
     {

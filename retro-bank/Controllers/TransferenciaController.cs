@@ -23,6 +23,8 @@ namespace retro_bank.Controllers
         [HttpGet]
         public Transferencia Get(int id)
         {
+   
+         
             return Transferencia.Busca().Where(c => c.Id == id).First();
         }
 

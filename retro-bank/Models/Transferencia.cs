@@ -12,7 +12,7 @@ namespace retro_bank.Models
         private static DBContext1 _db = new DBContext1();
         public int Id { get; set; }
         public double Valor { get; set; }
-        public string Data { get; set; }
+        public DateTime Data { get; internal set; }
         public int ClienteRemetenteId { get; set; }
         public int ClienteDestinatarioId { get; set; }
 
@@ -32,6 +32,11 @@ namespace retro_bank.Models
                 return false;
             }
         }
+
+       /* internal static void Dataa()
+        {
+            DateTime data = DateTime.Now;
+        }*/
 
         public static DbSet<Transferencia> Busca()
         {
