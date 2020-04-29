@@ -281,10 +281,6 @@
     <Compile Include="Migrations\20200429121401_ExtratoDataAddData.designer.cs">
       <DependentUpon>20200429121401_ExtratoDataAddData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200429133713_SeedTransferencias.cs" />
-    <Compile Include="Migrations\20200429133713_SeedTransferencias.designer.cs">
-      <DependentUpon>20200429133713_SeedTransferencias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\DBContext1ModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DBContext1.cs" />

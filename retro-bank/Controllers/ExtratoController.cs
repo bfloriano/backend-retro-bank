@@ -20,20 +20,30 @@ namespace retro_bank.Controllers
             return Extrato.Lista();
         }
 
-        [HttpGet]
+      /*  [HttpGet]
         [Route("extrato/{clienteId}")]
-        public object Index(int clienteId)
+        public Extrato GetExtrato(int clienteId)
         {
+            //return Extrato.Busca().Where(c => c.ClienteId == clienteId).First();
             var cliente = Cliente.BuscaPorId(clienteId);
 
             var Saldo = Extrato.SaldoPorClienteId(clienteId);
-            //var extrato = cliente.ListaExtrato();
+            var extrato = cliente.ListaExtrato();
 
 
-        return Saldo; 
+            return extrato;
+
+        }*/
 
 
-        }
+        //  var cliente = Cliente.BuscaPorId(clienteId);
+
+        //var Saldo = Extrato.SaldoPorClienteId(clienteId);
+        //var extrato = cliente.ListaExtrato();
+
+
+        //return Saldo; 
+
 
     }
 }

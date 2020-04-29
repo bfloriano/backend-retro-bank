@@ -8,21 +8,11 @@ using retro_bank.Models;
 
 namespace retro_bank.Controllers
 {
-    //[Route("")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransferenciaController : ApiController
     {
+       
         [Route("transferencia")]
-        [HttpGet]
-        public object Index()
-        {
-            return new
-            {
-                Mesagem = "Bem vindo a api de tranferencia"
-            };
-        }
-
-        [Route("transferencia/fazer")]
         [HttpPost]
         public void FazerTransferencia([FromBody] TransferenciaPost transrefenciaPost)
         {
@@ -32,14 +22,12 @@ namespace retro_bank.Controllers
                 transrefenciaPost.valor);
         }
 
-        //[Route("transferencia/{id}")]
-       // [HttpGet]
-        //public Transferencia Get(int id)
-        //{
-          //  return Transferencia.Busca().Where(c => c.Id == id).First();
-        //}
-
-     
+        [Route("transferencia/{id}")]
+        [HttpGet]
+        public Transferencia Get(int id)
+        {
+            return Transferencia.Busca().Where(c => c.Id == id).First();
+        }
 
     }
 

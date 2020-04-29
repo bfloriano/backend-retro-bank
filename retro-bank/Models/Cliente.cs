@@ -19,8 +19,6 @@ namespace retro_bank.Models
 
 
 
-
-
         public static List<Cliente> Lista()
         {
             return _db.Clientes.ToList();
@@ -64,56 +62,7 @@ namespace retro_bank.Models
             _db.SaveChanges();
         }
 
-      //  internal static void AtualizaSaldoI(double SaldoI)
-       // {
-            //var credito = Cliente.Lista().Find(cliente.Id).SaldoI;
-        //    SaldoI = Transferencia.SaldoAtual(SaldoI);
-            
-          
-        //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        internal List<Extrato> ListaExtrato()
-        {
-            return Extrato.Lista(this.Id);
-        }
-        */
-
-
-
-
-        /* internal static double Saldo(int Id, double SaldoI)
-         {
-             var SaldoFinal = SaldoI + Transferencia.SaldoAtualizado(Id, SaldoI);
-             return SaldoFinal;
-         }*/
-
-        // public int TransferenciaId { get; set; }
-        //public Transferencia Transferencia { get; set; }
-
-
-        //public ICollection<Transferencia> Transferencias { get; set; }
-
-        //  public ICollection<Extrato> Extratos { get; set; }
-
-
-
-
-
+      
     }
-
 
 }

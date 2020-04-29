@@ -28,16 +28,6 @@ namespace retro_bank.Controllers
             return Cliente.BuscaPorId(id);
         }
 
-        [Route("clientes/{id}/saldo")]
-        [HttpGet]
-        public object Saldo(int clienteId)
-        {
-            return new
-            {
-                Saldo = Cliente.SaldoPorId(clienteId)
-            };
-        }
-
         [HttpPost]
         [Route("clientes/login")]
         public object Login([FromBody] Cliente cliente)

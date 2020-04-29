@@ -12,12 +12,12 @@ namespace retro_bank.Models
     {
         private static DBContext1 _db = new DBContext1();
 
-
         public int Id { get; set; }
         public double Valor { get; set; }
         public DateTime Data { get; internal set; }
         public int ClienteRemetenteId { get; set; }
         public int ClienteDestinatarioId { get; set; }
+
 
         internal Cliente ClienteDestinatario()
         {
@@ -38,7 +38,6 @@ namespace retro_bank.Models
         {
             return _db.Transferencias;
         }
-
 
         internal bool Salvar()
         {

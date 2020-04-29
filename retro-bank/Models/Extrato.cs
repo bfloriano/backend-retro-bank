@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Microsoft.EntityFrameworkCore;
 
 namespace retro_bank.Models
 {
@@ -15,6 +16,7 @@ namespace retro_bank.Models
         public DateTime Data { get; set; }
         public int ClienteId { get; set; }
 
+
         internal static List<Extrato> Lista()
         {
             return _db.Extratos.ToList();
@@ -23,6 +25,11 @@ namespace retro_bank.Models
         internal static List<Extrato> Lista(int ClienteId)
         {
             return _db.Extratos.Where(e => e.ClienteId == ClienteId).ToList();
+        }
+
+        public static DbSet<Extrato> Busca()
+        {
+            return _db.Extratos;
         }
 
         internal bool Salvar()
