@@ -38,8 +38,8 @@ namespace retro_bank.Models
 
         internal static double SaldoPorId(int clienteId)
         {
-            var cliente = Cliente.Busca().Where(c => c.Id == clienteId).First();
-            return cliente.SaldoI + Extrato.SaldoPorClienteId(clienteId);
+            //var cliente = Cliente.Busca().Where(c => c.Id == clienteId).First();
+            return Extrato.SaldoPorClienteId(clienteId);
         }
 
         public bool Salvar()
