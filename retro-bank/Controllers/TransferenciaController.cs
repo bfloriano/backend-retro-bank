@@ -23,9 +23,22 @@ namespace retro_bank.Controllers
         [HttpGet]
         public Transferencia Get(int id)
         {
-   
-         
+
+            
             return Transferencia.Busca().Where(c => c.Id == id).First();
+        }
+
+        [Route("transf")]
+        [HttpGet]
+        public object Index(int clienteId, double valor)
+        {
+            var cliente = Cliente.BuscaPorId(clienteId);
+            var saldo = Transferencia.SaldoAtual(valor);
+ 
+
+            return saldo;
+
+
         }
 
         /*

@@ -17,28 +17,24 @@ namespace retro_bank.Models
         public string Senha { get; set; }
         public double SaldoI { get; set; }
 
+
+
+
+
+        public static List<Cliente> Lista()
+        {
+            return _db.Clientes.ToList();
+        }
+
+        public static DbSet<Cliente> Busca()
+        {
+            return _db.Clientes;
+        }
+
         internal static Cliente BuscaPorId(int clienteId)
         {
             return Cliente.Busca().Where(c => c.Id == clienteId).First();
         }
-
-        internal List<Extrato> ListaExtrato()
-        {
-            return Extrato.Lista(this.Id);
-        }
-
-        internal static double Saldo(int Id, double SaldoI)
-        {
-            return SaldoI + Transferencia.SaldoAtualizado(Id, SaldoI);
-        }
-
-        // public int TransferenciaId { get; set; }
-        //public Transferencia Transferencia { get; set; }
-
-
-        //public ICollection<Transferencia> Transferencias { get; set; }
-
-        //  public ICollection<Extrato> Extratos { get; set; }
 
         public bool Salvar()
         {
@@ -60,15 +56,54 @@ namespace retro_bank.Models
             _db.SaveChanges();
         }
 
-        public static List<Cliente> Lista() 
-        { 
-            return _db.Clientes.ToList(); 
+        internal static void AtualizaSaldoI(double SaldoI)
+        {
+            //var credito = Cliente.Lista().Find(cliente.Id).SaldoI;
+            SaldoI = Transferencia.SaldoAtual(SaldoI);
+            
+          
         }
 
-        public static DbSet<Cliente> Busca()
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        internal List<Extrato> ListaExtrato()
         {
-            return _db.Clientes;
+            return Extrato.Lista(this.Id);
         }
+        */
+
+
+
+
+        /* internal static double Saldo(int Id, double SaldoI)
+         {
+             var SaldoFinal = SaldoI + Transferencia.SaldoAtualizado(Id, SaldoI);
+             return SaldoFinal;
+         }*/
+
+        // public int TransferenciaId { get; set; }
+        //public Transferencia Transferencia { get; set; }
+
+
+        //public ICollection<Transferencia> Transferencias { get; set; }
+
+        //  public ICollection<Extrato> Extratos { get; set; }
+
+
+
+
 
     }
 

@@ -11,11 +11,25 @@ namespace retro_bank.Models
     public class Transferencia
     {
         private static DBContext1 _db = new DBContext1();
+
+
         public int Id { get; set; }
         public double Valor { get; set; }
         public DateTime Data { get; internal set; }
         public int ClienteRemetenteId { get; set; }
         public int ClienteDestinatarioId { get; set; }
+
+
+        internal static List<Transferencia> Lista()
+        {
+            return _db.Transferencias.ToList();
+        }
+
+        public static DbSet<Transferencia> Busca()
+        {
+            return _db.Transferencias;
+        }
+
 
         internal bool Salvar()
         {
@@ -31,41 +45,68 @@ namespace retro_bank.Models
             }
         }
 
-       /* internal static void Dataa()
-        {
-            DateTime data = DateTime.Now;
-        }*/
+        //Cliente cliente = new Cliente();
 
-        public static DbSet<Transferencia> Busca()
+        internal static double SaldoAtual(int ClienteRemetenteId, double Valor)
         {
-            return _db.Transferencias;
+            //var credito = Cliente.Lista().Find(cliente.Id).SaldoI;
+           double valor = Cliente.Lista().SaldoI;
+            return (valor - Valor);
         }
 
-        internal static List<Transferencia> Lista()
-        {
-            return _db.Transferencias.ToList();
-        }
 
-        internal static double SaldoAtualizado(int ClienteRemetenteId, double Valor)
-        {
-            double valorI = Extrato.SaldoPorClienteId(ClienteRemetenteId) - Valor;
-
-            return valorI;
-        }
-        /*
-        internal double SaldoAtualizadoDestinatario(int ClienteDestinatarioId)
-        {
-            double valorI = Cliente.Saldo(this.ClienteDestinatarioId);
-
-            return valorI + Valor;
-        }*/
-
-        // public ICollection<Cliente> Clientes { get; set; }
-
-        // public Cliente Cliente { get; set; }
-        //[ForeignKey("Cliente")]
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* internal static void Dataa()
+     {
+         DateTime data = DateTime.Now;
+     }*/
+
+
+
+
+
+
+    /*
+     * 
+     * 
+     *  internal static double SaldoAtualizado(int ClienteRemetenteId, double Valor)
+    {
+        double valorI = Extrato.SaldoPorClienteId(ClienteRemetenteId) - Valor;
+
+        return valorI;
+    }
+
+    internal double SaldoAtualizadoDestinatario(int ClienteDestinatarioId)
+    {
+        double valorI = Cliente.Saldo(this.ClienteDestinatarioId);
+
+        return valorI + Valor;
+    }*/
+
+    // public ICollection<Cliente> Clientes { get; set; }
+
+    // public Cliente Cliente { get; set; }
+    //[ForeignKey("Cliente")]
+
+}
 
     /*protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

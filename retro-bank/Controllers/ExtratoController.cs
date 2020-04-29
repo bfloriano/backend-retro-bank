@@ -10,20 +10,28 @@ using retro_bank.Models;
 namespace retro_bank.Controllers
 {
 
-    //[Route("extrato")]
+    [Route("extrato")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ExtratoController : ApiController
     {
+        [HttpGet]
+        public List<Extrato> Index()
+        {
+            return Extrato.Lista();
+        }
+
         [HttpGet]
         [Route("extrato/{clienteId}")]
         public object Index(int clienteId)
         {
             var cliente = Cliente.BuscaPorId(clienteId);
-            return new
-            {
-                //Saldo = cliente.Saldo(clienteId),
-                Extrato = cliente.ListaExtrato()
-            };
+
+            var Saldo = Extrato.SaldoPorClienteId(clienteId);
+            //var extrato = cliente.ListaExtrato();
+
+
+        return Saldo; 
+
 
         }
 

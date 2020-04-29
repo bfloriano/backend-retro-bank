@@ -15,6 +15,11 @@ namespace retro_bank.Models
         public string Data { get; set; }
         public int ClienteId { get; set; }
 
+        internal static List<Extrato> Lista()
+        {
+            return _db.Extratos.ToList();
+        }
+
         internal static List<Extrato> Lista(int ClienteId)
         {
             return _db.Extratos.Where(e => e.ClienteId == ClienteId).ToList();
