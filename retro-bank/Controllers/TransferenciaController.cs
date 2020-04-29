@@ -9,29 +9,44 @@ using retro_bank.Models;
 namespace retro_bank.Controllers
 {
     //[Route("")]
-    [Route("transferencia")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransferenciaController : ApiController
     {
+        [Route("transferencia")]
         [HttpGet]
-        public List<Transferencia> Index()
+        public object Index()
         {
-            return Transferencia.Lista();
-        }
-
-        [Route("transferencia/{id}")]
-        [HttpGet]
-        public Transferencia Get(int id)
-        {
-            return Transferencia.Busca().Where(c => c.Id == id).First();
+            return new
+            {
+                Mesagem = "Bem vindo a api de tranferencia"
+            };
         }
 
         [Route("transferencia/fazer")]
         [HttpPost]
-        public void FazerTransferencia(int clienteRemetenteId, int clienteDestinatarioId, double valor)
+        public void FazerTransferencia([FromBody] TransferenciaPost transrefenciaPost)
         {
-            Transferencia.FazerTranferecia(clienteRemetenteId, clienteDestinatarioId, valor);
+            Transferencia.FazerTranferecia(
+                transrefenciaPost.clienteRemetenteId,
+                transrefenciaPost.clienteDestinatarioId, 
+                transrefenciaPost.valor);
         }
 
+        //[Route("transferencia/{id}")]
+       // [HttpGet]
+        //public Transferencia Get(int id)
+        //{
+          //  return Transferencia.Busca().Where(c => c.Id == id).First();
+        //}
+
+     
+
+    }
+
+    public class TransferenciaPost
+    {
+        public int clienteRemetenteId { get; set; }
+        public int clienteDestinatarioId { get; set; }
+        public double valor { get; set; }
     }
 }
