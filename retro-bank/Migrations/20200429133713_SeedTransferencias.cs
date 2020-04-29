@@ -10,8 +10,15 @@ namespace retro_bank.Migrations
             new Transferencia()
             {
                 ClienteRemetenteId = Cliente.Busca().Find(3).Id,
-                Valor = 1000.00,
                 ClienteDestinatarioId = Cliente.Busca().Find(1).Id,
+                Valor = 2000.00,
+            }.Salvar();
+
+            new Transferencia()
+            {
+                ClienteRemetenteId = Cliente.Busca().Find(3).Id,
+                ClienteDestinatarioId = Cliente.Busca().Find(2).Id,
+                Valor = 2000.00,
             }.Salvar();
 
         }

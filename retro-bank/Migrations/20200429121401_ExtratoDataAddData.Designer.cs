@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using retro_bank.Models;
 
 namespace retro_bank.Migrations
 {
     [DbContext(typeof(DBContext1))]
-    partial class DBContext1ModelSnapshot : ModelSnapshot
+    [Migration("20200429121401_ExtratoDataAddData")]
+    partial class ExtratoDataAddData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

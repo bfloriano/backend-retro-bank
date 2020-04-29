@@ -16,6 +16,8 @@ namespace retro_bank.Migrations
                 Tipo = TipoOperacao.Credito,
             }.Salvar();
 
+
+        
             new Extrato()
             {
                 ClienteId = Cliente.Busca().First().Id,

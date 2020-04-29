@@ -19,6 +19,15 @@ namespace retro_bank.Models
         public int ClienteRemetenteId { get; set; }
         public int ClienteDestinatarioId { get; set; }
 
+        internal Cliente ClienteDestinatario()
+        {
+            return Cliente.BuscaPorId(this.ClienteDestinatarioId);
+        }
+
+        internal Cliente ClienteRemetente()
+        {
+            return Cliente.BuscaPorId(this.ClienteRemetenteId);
+        }
 
         internal static List<Transferencia> Lista()
         {
@@ -45,17 +54,19 @@ namespace retro_bank.Models
             }
         }
 
-        //Cliente cliente = new Cliente();
-
-        internal static double SaldoAtual(int ClienteRemetenteId, double Valor)
+        internal static void FazerTranferecia(int clienteRemetenteId,  int clienteDestinatarioId, double valor)
         {
-            //var credito = Cliente.Lista().Find(cliente.Id).SaldoI;
-           double valor = Cliente.Lista().SaldoI;
-            return (valor - Valor);
+            var transferencia = new Transferencia()
+            {
+                ClienteDestinatarioId = clienteDestinatarioId,
+                ClienteRemetenteId = clienteRemetenteId,
+                Valor = valor,
+                Data = DateTime.Now,
+            };
+            transferencia.Salvar();
+
+            Extrato.EfetuarTransferencia(transferencia);
         }
-
-
-
     }
 
 
@@ -125,4 +136,3 @@ namespace retro_bank.Models
                 .WithMany(c => c.BookCategories)
                 .HasForeignKey(bc => bc.CategoryId);
     }*/
-}

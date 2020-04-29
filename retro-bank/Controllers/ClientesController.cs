@@ -18,13 +18,24 @@ namespace retro_bank.Controllers
         public List<Cliente> Index()
         {
             return Cliente.Lista();
+            
         }
                 
         [Route("clientes/{id}")]
         [HttpGet]
         public Cliente Get(int id)
         {
-            return Cliente.Busca().Where(c => c.Id == id).First();
+            return Cliente.BuscaPorId(id);
+        }
+
+        [Route("clientes/{id}/saldo")]
+        [HttpGet]
+        public object Saldo(int clienteId)
+        {
+            return new
+            {
+                Saldo = Cliente.SaldoPorId(clienteId)
+            };
         }
 
         [HttpPost]

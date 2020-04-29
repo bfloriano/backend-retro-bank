@@ -269,13 +269,21 @@
     <Compile Include="Migrations\20200428184237_SeedClientes.designer.cs">
       <DependentUpon>20200428184237_SeedClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200428185533_SeedTransferencias.cs" />
-    <Compile Include="Migrations\20200428185533_SeedTransferencias.designer.cs">
-      <DependentUpon>20200428185533_SeedTransferencias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\20200428185609_SeedExtratos.cs" />
     <Compile Include="Migrations\20200428185609_SeedExtratos.designer.cs">
       <DependentUpon>20200428185609_SeedExtratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200429121304_ExtratoData.cs" />
+    <Compile Include="Migrations\20200429121304_ExtratoData.designer.cs">
+      <DependentUpon>20200429121304_ExtratoData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200429121401_ExtratoDataAddData.cs" />
+    <Compile Include="Migrations\20200429121401_ExtratoDataAddData.designer.cs">
+      <DependentUpon>20200429121401_ExtratoDataAddData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200429133713_SeedTransferencias.cs" />
+    <Compile Include="Migrations\20200429133713_SeedTransferencias.designer.cs">
+      <DependentUpon>20200429133713_SeedTransferencias.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DBContext1ModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />

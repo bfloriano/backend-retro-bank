@@ -33,7 +33,15 @@ namespace retro_bank.Models
 
         internal static Cliente BuscaPorId(int clienteId)
         {
-            return Cliente.Busca().Where(c => c.Id == clienteId).First();
+            var cliente = Cliente.Busca().Where(c => c.Id == clienteId).First();
+            cliente.SaldoI = Cliente.SaldoPorId(cliente.Id);
+            return cliente;
+        }
+
+        internal static double SaldoPorId(int clienteId)
+        {
+            var cliente = Cliente.Busca().Where(c => c.Id == clienteId).First();
+            return cliente.SaldoI + Extrato.SaldoPorClienteId(clienteId);
         }
 
         public bool Salvar()
@@ -56,13 +64,13 @@ namespace retro_bank.Models
             _db.SaveChanges();
         }
 
-        internal static void AtualizaSaldoI(double SaldoI)
-        {
+      //  internal static void AtualizaSaldoI(double SaldoI)
+       // {
             //var credito = Cliente.Lista().Find(cliente.Id).SaldoI;
-            SaldoI = Transferencia.SaldoAtual(SaldoI);
+        //    SaldoI = Transferencia.SaldoAtual(SaldoI);
             
           
-        }
+        //}
 
 
 

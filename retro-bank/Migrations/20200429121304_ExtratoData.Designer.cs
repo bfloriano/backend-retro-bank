@@ -10,8 +10,8 @@ using retro_bank.Models;
 namespace retro_bank.Migrations
 {
     [DbContext(typeof(DBContext1))]
-    [Migration("20200428185533_SeedTransferencias")]
-    partial class SeedTransferencias
+    [Migration("20200429121304_ExtratoData")]
+    partial class ExtratoData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,9 +60,6 @@ namespace retro_bank.Migrations
 
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Data")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Descricao")
                         .HasColumnType("nvarchar(max)");

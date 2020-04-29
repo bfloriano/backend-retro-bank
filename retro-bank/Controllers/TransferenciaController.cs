@@ -23,50 +23,15 @@ namespace retro_bank.Controllers
         [HttpGet]
         public Transferencia Get(int id)
         {
-
-            
             return Transferencia.Busca().Where(c => c.Id == id).First();
         }
 
-        [Route("transf")]
-        [HttpGet]
-        public object Index(int clienteId, double valor)
+        [Route("transferencia/fazer")]
+        [HttpPost]
+        public void FazerTransferencia(int clienteRemetenteId, int clienteDestinatarioId, double valor)
         {
-            var cliente = Cliente.BuscaPorId(clienteId);
-            var saldo = Transferencia.SaldoAtual(valor);
- 
-
-            return saldo;
-
-
+            Transferencia.FazerTranferecia(clienteRemetenteId, clienteDestinatarioId, valor);
         }
 
-        /*
-        [HttpPost]
-        [Route("clientes/login")]
-        public object Login([FromBody] Cliente cliente)
-        {
-            try
-            {
-                var ret = (
-                   from c in Cliente.Busca()
-                   where c.CPF == cliente.CPF && c.Senha == cliente.Senha
-                   select new
-                   {
-                       Nome = c.Nome,
-                       CPF = c.CPF,
-                       Agencia = c.Agencia,
-                       Conta = c.Conta,
-                       Senha = c.Senha,
-                       Id = c.Id,
-                   }
-               ).First();
-                return ret;
-            }
-            catch
-            {
-                return new { Erro = "CPF ou senha inválido" };
-            }
-        }*/
     }
 }
