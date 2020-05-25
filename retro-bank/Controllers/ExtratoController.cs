@@ -20,6 +20,11 @@ namespace retro_bank.Controllers
             return Extrato.Lista();
         }
 
+       // public List<Extrato> Index(int pageIndex, int pageSize)
+        //{
+          //  return Extrato.Lista().Skip(pageIndex * pageSize).Take(pageSize);
+        //}
+
         [Route("extrato/{id}")]
         [HttpGet]
         public Extrato Get(int id)

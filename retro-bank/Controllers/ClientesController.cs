@@ -32,8 +32,8 @@ namespace retro_bank.Controllers
         [Route("clientes/login")]
         public object Login([FromBody] Cliente cliente)
         {
-            try
-            {
+           //try
+           //{
                 var ret = (
                    from c in Cliente.Busca()
                    where c.CPF == cliente.CPF && c.Senha == cliente.Senha
@@ -46,20 +46,50 @@ namespace retro_bank.Controllers
                    }
                ).First();
                 return ret;
+           //}
+           //catch
+           //{
+           //     return new { Erro = "CPF ou senha inválido" };
+           //}
+        }
+
+        [HttpPost]
+        [Route("clientes/create")]
+        public void Create([FromBody] Cliente cliente)
+        {
+            try
+            {
+                Cliente.Criar(
+                    cliente.Nome,
+                    cliente.CPF,
+                    cliente.Agencia,
+                    cliente.Conta,
+                    cliente.Senha);
             }
             catch
             {
-                return new { Erro = "CPF ou senha inválido" };
+                //new { Erro = "Não foi possível criar a conta. Tente novamente" };
             }
         }
 
+
         /*
-        [HttpPut]
-        Atualizacao de dados
-       
-        [HttpPost]
-        Criacao de usuarios
-        */
+         
+      [HttpDelete]
+      [Route("clientes/{id}")]
+      public void Delete([FromUri] Cliente cliente)
+      {
+          Cliente.Apagar();
+      }
+
+
+      [HttpPut]
+      Atualizacao de dados
+
+   
+      */
 
     }
+
+
 }

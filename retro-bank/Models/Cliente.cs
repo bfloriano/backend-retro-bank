@@ -38,7 +38,6 @@ namespace retro_bank.Models
 
         internal static double SaldoPorId(int clienteId)
         {
-            //var cliente = Cliente.Busca().Where(c => c.Id == clienteId).First();
             return Extrato.SaldoPorClienteId(clienteId);
         }
 
@@ -56,13 +55,26 @@ namespace retro_bank.Models
             }
         }
 
-        internal void Apagar()
+        public void Apagar()
         {
             _db.Clientes.Remove(this);
             _db.SaveChanges();
         }
 
-      
+        internal static void Criar(string nome, string cpf, string ag, string cc, string senha)
+        {
+            var cliente = new Cliente()
+            {
+                Nome = nome,
+                CPF = cpf,
+                Agencia = ag,
+                Conta = cc,
+                Senha = senha,
+                SaldoI = 0,
+            };
+            cliente.Salvar();
+        }
+
     }
 
 }
